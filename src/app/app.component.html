@@ -1,0 +1,14 @@
+
+<h1>Ciclo de vida de Angular</h1>
+<hr>
+
+<button (click)="mostrar = !mostrar"> <!-- este evente va establecer a mostrar el valor inverso que tengo mostrar en un punto de tiempo -->
+
+  {{ mostrar ? 'Ocultar' : 'Mostrar' }} <!-- terenario html -->
+   <!-- usar valor boolean de una prop manipulando html -->
+
+</button>
+
+<app-pagina1 *ngIf="mostrar"></app-pagina1> <!-- este componente se muestra si mostrar es true -->
+                                            <!-- tener en cuenta cuando se occulta un componnete , se destruye , ahhi tenemos hook destroy
+                                                 para ejecutar procesos de limpieza de Observables etc ,,, -->
